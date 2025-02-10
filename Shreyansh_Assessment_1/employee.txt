@@ -1,0 +1,37 @@
+Employee Details :-
+
+ID : 1
+Name : AAA
+Role : CEO
+HRA : 5000
+DA : 2000
+Total Salary : 7000
+
+ID : 2
+Name : BBB
+Role : CTO
+HRA : 4000
+DA : 1800
+Total Salary : 5800
+
+ID : 3
+Name : CCC
+Role : CFO
+HRA : 3000
+DA : 1600
+Total Salary : 4600
+
+ID : 4
+Name : DDD
+Role : CDO
+HRA : 2000
+DA : 1400
+Total Salary : 3400
+
+ID : 5
+Name : EEE
+Role : Intern
+HRA : 1000
+DA : 1200
+Total Salary : 2200
+

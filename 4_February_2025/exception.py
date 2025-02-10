@@ -2,28 +2,28 @@
 
 ''' always prefer specific exception instead of generic exception '''
 
-try:
-    x=int(input("Enter a number : "))
-    y=int(input("Enter another number : "))
-    print(x/y)
-except Exception as msg:
-    print(msg.with_traceback)
-except ArithmeticError as msg:
-    print(msg)
+# try:
+#     x=int(input("Enter a number : "))
+#     y=int(input("Enter another number : "))
+#     print(x/y)
+# except Exception as msg:
+#     print(msg.with_traceback)
+# except ArithmeticError as msg:
+#     print(msg)
 
-except ZeroDivisionError:
-    print("Invalid input")
-except ValueError:
-    print("Value Error")
+# except ZeroDivisionError:
+#     print("Invalid input")
+# except ValueError:
+#     print("Value Error")
 
-'''Creating your own Exception.'''
-class TooyoungException(Exception):
-    def __init__(self, msg):
-        self.msg=msg
+# '''Creating your own Exception.'''
+# class TooyoungException(Exception):
+#     def __init__(self, msg):
+#         self.msg=msg
 
-age=10
-if age<=18:
-    raise TooyoungException("Under Aged .")
+# age=10
+# if age<=18:
+#     raise TooyoungException("Under Aged .")
 
 class InvalidID(Exception):
     def __init__(self, msg):
@@ -41,3 +41,4 @@ class Employee:
         print(f"Name: {self.name}, Department: {self.dep}, ID: {self.id}")
 a=Employee("FIL","ISS","1202")
 a.display()
+

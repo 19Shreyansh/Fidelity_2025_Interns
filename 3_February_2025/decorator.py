@@ -18,4 +18,4 @@ def f1(fun):
 @f1
 def add(x,y):
     print("Sum is : ",x+y)
-add(10,20)
+add(10,20)    

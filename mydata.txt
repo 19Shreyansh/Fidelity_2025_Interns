@@ -1,0 +1,4 @@
+[9, 7, 2, 8]
+{"a": "A", "b": 25, "c":99.00}
+["football", "basketball", "chess"]
+{"Type": "Finance", "company": "Fidelity"}
