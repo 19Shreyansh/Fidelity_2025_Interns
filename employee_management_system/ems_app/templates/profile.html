@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .profile-container h2 {
+            margin-bottom: 20px;
+        }
+        .profile-details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .profile-details p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn.delete {
+            background: #DC3545;
+        }
+        .btn.delete:hover {
+            background: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <h2>My Profile</h2>
+        
+        <div class="profile-details">
+            <p><strong>Employee ID:</strong> {{ emp.eID }}</p>
+            <p><strong>Employee Name:</strong> {{ emp.emp_name }}</p>
+            <p><strong>Email:</strong> {{ emp.email }}</p>
+            <p><strong>Date of Joining:</strong> {{ emp.doj }}</p>
+        </div>
+
+        <!-- Buttons for Update & Delete -->
+        <a href="{% url 'update_profile' emp.eID %}" class="btn">Update</a>
+        <a href="{% url 'delete_profile' emp.eID %}" class="btn delete" onclick="return confirm('Are you sure you want to delete your profile?');">Delete</a>
+        
+    </div>
+
+</body>
+</html>

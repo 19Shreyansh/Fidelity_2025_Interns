@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px">
+        <tr>
+            <th>EmployeeId</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date of Joining</th>
+        </tr>
+        {% for i in pro %}
+        <tr>
+            <td>{{i.eId}}</td>
+            <td>{{i.emp_name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.emp_doj}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
