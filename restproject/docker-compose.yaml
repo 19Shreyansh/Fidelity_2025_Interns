@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mysql_db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: 'fidelity'
+      MYSQL_ROOT_PASSWORD: 'Anonymous@23'
+      MYSQL_HOST: 'localhost'
+      MYSQL_PASSWORD: 'Anonymous@23' 
+    ports:
+      - '3306:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+  web:
+    build: .
+    container_name: django
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - '8000:8000'
+    depends_on:
+      - mysql_db
+    environment:
+      - DATABASE_HOST=mysql_db
+volumes:
+  db_data:
